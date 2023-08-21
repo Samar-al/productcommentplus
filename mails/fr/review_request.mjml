@@ -1,0 +1,77 @@
+<mjml>
+    <mj-head>
+        <mj-attributes>
+            <mj-text font-family="Manrope, sans-serif" align="center" font-size="18px" line-height="26px" color="#ffffff" padding="0px"/>
+            <mj-section padding="0px"/>
+            <mj-button background-color="#EA7003" font-weight="14px" color="#ffffff" font-family="Manrope, sans-serif">
+                
+            </mj-button>
+        </mj-attributes>
+    </mj-head>
+   <!-- Logo section  -->
+    <mj-body background-color="#FEFEFE">
+    <mj-wrapper border="1px solid #000000" padding="50px 30px">
+        <mj-section>
+            <mj-column>
+                <mj-image width="128px" padding="25px" align="left" src="{{logo}}" alt="logo boutique" />
+            </mj-column>
+        </mj-section>
+    <!-- Welcome section  -->
+        <mj-section>
+            <mj-column>
+                <mj-text font-size="22px" color="#000000" font-weight="bold" align="left" padding="25px">
+                   Bonjour {{customer_firstname}} {{customer_lastname}}, 
+                </mj-text>
+                <mj-text font-size="18px" color="#000000" font-weight="bold" align="left" padding="25px">
+                   Nous serions heureux d'avoir votre avis : 
+                </mj-text>
+            </mj-column>
+        </mj-section>
+        <!-- product section  -->
+        <mj-section background-color="#F1F1F1" padding="25px">
+            <mj-column width="100%">
+                <mj-text font-size="16px" color="#000000" align="left" padding="25px">
+                   Si vous avez adoré votre/vos produits, faites-le savoir en suivant le(s) lien(s) ci-dessous.
+                    <span style="font-weight: bold;">Gagnez un bon de reduction de 1€, cumulable, pour chaque avis.</span>
+                </mj-text>
+                <mj-text font-size="18px" color="#000000" font-weight="bold" align="left" padding="25px">
+                   Produit(s)
+                </mj-text>
+                <mj-divider border-color="#000000" border-width="2px"/> 
+            </mj-column>
+            <mj-raw>
+                <?php foreach($products as $product) : ?>
+                    <mj-column width="49%">
+                        <mj-image src="<?php echo $product['cover']; ?>" width="100px" align="left" padding-left="25px"/>
+                    </mj-column>
+                    <mj-column width="49%">
+                        <mj-text color="#000000" font-weight="700" align="left">
+                        <?php echo $product['name']; ?>
+                        </mj-text>
+                        <mj-button font-size="18px" align="left" padding="25px 0">
+                        Rédiger un avis
+                        </mj-button>
+                    </mj-column>
+                <?php endforeach; ?>
+            </mj-raw>
+            <mj-column width="100%">
+                <mj-divider border-color="#000000" border-width="2px"/>
+                <mj-text align="left" padding="25px" color="#000">
+                    Merci d'avoir choisi <span style="text-decoration: underline; font-weight: bold;">{{shop_name}}</span> et de nous avoir fait confiance.
+                </mj-text >
+                <mj-text align="left" padding="25px" color="#000">
+                    Prenez soin de vous,<br>
+                    {{shop_name}}  
+                </mj-text>   
+            </mj-column>   
+        </mj-section>
+        <mj-section>
+            <mj-column width="100%">
+                <mj-text color="#000" padding-top="20px">
+                    <span style="text-decoration: underline; font-weight: bold;">{{shop_name}}</span>
+                </mj-text>
+            </mj-column>
+        </mj-section>
+       </mj-wrapper> 
+    </mj-body>
+</mjml>

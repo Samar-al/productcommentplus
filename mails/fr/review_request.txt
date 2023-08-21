@@ -1,0 +1,8 @@
+Hello {customer_firstname} {customer_lastname},
+
+We would appreciate it if you could take a moment to share your feedback on the products you recently purchased.
+
+Please click on the link below to provide your review:
+Review Products: http://localhost:8888/PrestaShopFormation/prestashop_edition_basic_version_8.0.4/index.php?controller=product&id_product={product_id}&id_order={order_id}
+
+Thank you for your support!
